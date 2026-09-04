@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OUR LITTLE SECRET ♡</title>
+
+
+    <!-- POPPINS FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =========================
+           COLOUR SYSTEM
+        ========================= */
+
+        :root {
+
+            --red: #7b1816;
+
+            --green: #063c2c;
+
+            --gold: #d4a45a;
+
+            --cream: #f9e9d7;
+
+            --white: #fffaf4;
+
+        }
+
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+        /* =========================
+           BODY
+        ========================= */
+
+        body {
+
+            min-height: 100svh;
+
+            width: 100%;
+
+            font-family: 'Poppins', sans-serif;
+
+            color: var(--cream);
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 18px 12px;
+
+            position: relative;
+
+            overflow-x: hidden;
+
+            overflow-y: auto;
+
+            background-attachment: fixed;
+
+
+            /*
+                MAIN RED + GREEN GRADIENT
+            */
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--red) 0%,
+                    #5b1a1b 35%,
+                    #173b2e 65%,
+                    var(--green) 100%
+                );
+
+        }
+
+
+        /* =========================
+           FLOWER SVG BACKGROUND
+        ========================= */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            background-image: url("flower.svg");
+
+            background-repeat: repeat;
+
+            background-size: 2000px;
+
+            opacity: 0.25;
+
+            pointer-events: none;
+
+            z-index: 0;
+
+        }
+
+
+        /* =========================
+           SOFT LIGHT EFFECT
+        ========================= */
+
+        body::after {
+
+            content: "";
+
+            position: fixed;
+
+            width: 500px;
+
+            height: 500px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(212, 164, 90, 0.18),
+                    transparent 70%
+                );
+
+            top: -200px;
+
+            right: -180px;
+
+            pointer-events: none;
+
+            z-index: 0;
+
+        }
+
+
+        /* =========================
+           MAIN CARD
+        ========================= */
+
+        .secret-card {
+
+            width: min(100%, 400px);
+
+            max-width: 400px;
+
+            margin: auto;
+
+            padding: 36px 22px;
+
+            position: relative;
+
+            z-index: 2;
+
+            text-align: center;
+
+
+            background:
+                rgba(249, 233, 215, 0.97);
+
+            color: var(--green);
+
+            border-radius: 26px;
+
+            border: 3px solid
+                rgba(212, 164, 90, 0.7);
+
+
+            box-shadow:
+
+                0 30px 80px
+                rgba(0, 0, 0, 0.28);
+
+
+            animation:
+                cardAppear 1s ease;
+
+        }
+
+
+        /* =========================
+           SMALL HEADING
+        ========================= */
+
+        .eyebrow {
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            letter-spacing: 4px;
+
+            color: var(--red);
+
+            margin-bottom: 10px;
+
+        }
+
+
+        /* =========================
+           HEART
+        ========================= */
+
+        .heart {
+
+            width: 45px;
+
+            height: 45px;
+
+            margin: 0 auto 18px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background: var(--green);
+
+            color: var(--gold);
+
+            font-size: 31px;
+
+
+            box-shadow:
+
+                0 12px 30px
+                rgba(6, 60, 44, 0.25);
+
+
+            animation:
+
+                heartbeat 2s infinite;
+
+        }
+
+
+        /* =========================
+           MAIN HEADING
+        ========================= */
+
+        h1 {
+
+            color: var(--green);
+
+            font-size: clamp(28px, 7vw, 40px);
+
+            line-height: 1.15;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+
+            max-width: 430px;
+
+            margin: 0 auto;
+
+            color: #52635c;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+        }
+
+
+        .intro strong {
+
+            color: var(--red);
+
+            font-weight: 700;
+
+        }
+
+
+        /* =========================
+           STORY PREVIEW
+        ========================= */
+
+        .story-box {
+
+            margin: 20px 0;
+
+            padding: 27px 23px;
+
+            border-radius: 20px;
+
+            background: var(--green);
+
+            color: var(--cream);
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+
+            box-shadow:
+
+                0 12px 30px
+                rgba(6, 60, 44, 0.18);
+
+        }
+
+
+        /* Gold decorative circle */
+
+        .story-box::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 130px;
+
+            height: 130px;
+
+            border-radius: 50%;
+
+            border: 1px solid
+                rgba(212, 164, 90, 0.2);
+
+            right: -60px;
+
+            bottom: -70px;
+
+        }
+
+
+        .story-label {
+
+            color: var(--gold);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .story-box h2 {
+
+            font-size: 21px;
+
+            line-height: 1.45;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            margin-bottom: 0px;
+
+        }
+
+
+        .story-box p {
+
+            color:
+                rgba(249, 233, 215, 0.78);
+
+            font-size: 12.5px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =========================
+           SUSPENSE
+        ========================= */
+
+        .suspense {
+
+            margin: 28px auto 23px;
+
+            color: var(--green);
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .suspense strong {
+
+            color: var(--red);
+
+            font-weight: 700;
+
+        }
+
+
+        /* =========================
+           HINT
+        ========================= */
+
+        .hint {
+
+            padding: 15px;
+
+            margin-bottom: 10px;
+
+            border-radius: 15px;
+
+            background: rgba(212, 164, 90, 0.13);
+
+            border: 1px dashed var(--gold);
+
+        }
+
+
+        .hint-title {
+
+            color: var(--red);
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 0px;
+
+        }
+
+
+        .hint-text {
+
+            color: var(--green);
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+        }
+
+
+        /* =========================
+           PASSWORD INPUT
+        ========================= */
+
+        input {
+
+            width: 100%;
+
+            height: 55px;
+
+            padding: 0 18px;
+
+            border-radius: 14px;
+
+            border: 1px solid
+                rgba(6, 60, 44, 0.2);
+
+            background: var(--white);
+
+            color: var(--green);
+
+            outline: none;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 14px;
+
+            text-align: center;
+
+            transition: 0.3s;
+
+        }
+
+
+        input::placeholder {
+
+            color: #9b938b;
+
+        }
+
+
+        input:focus {
+
+            border-color: var(--gold);
+
+            box-shadow:
+
+                0 0 0 4px
+                rgba(212, 164, 90, 0.16);
+
+        }
+
+        /* =========================
+   PASSWORD BOX
+========================= */
+
+.password-box {
+    position: relative;
+    width: 100%;
+}
+
+.password-box input {
+    padding-right: 55px;
+}
+
+.password-box .eye-button {
+    position: absolute;
+
+    right: 5px;
+    top: 5px;
+
+    width: 45px;
+    height: 45px;
+
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    color: var(--green);
+
+    border: none;
+    box-shadow: none;
+
+    font-size: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.password-box .eye-button:hover {
+    background: transparent;
+    color: var(--red);
+    transform: none;
+    box-shadow: none;
+}
+
+        /* =========================
+           UNLOCK BUTTON
+        ========================= */
+
+        button {
+
+            width: 100%;
+
+            height: 55px;
+
+            margin-top: 10px;
+
+            border: none;
+
+            border-radius: 14px;
+
+            background: var(--red);
+
+            color: var(--cream);
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.7px;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+        }
+
+
+        button:hover {
+
+            background: var(--green);
+
+            transform: translateY(-2px);
+
+            box-shadow:
+
+                0 10px 25px
+                rgba(6, 60, 44, 0.2);
+
+        }
+
+
+        button:active {
+
+            transform: translateY(0);
+
+        }
+
+
+        /* =========================
+           MESSAGE
+        ========================= */
+
+        #message {
+
+            min-height: 22px;
+
+            margin-top: 10px;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+
+            margin-top: 1px;
+
+            color: #9a8f84;
+
+            font-size: 9px;
+
+            font-weight: 600;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        /* =========================
+           ANIMATIONS
+        ========================= */
+
+        @keyframes cardAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(25px)
+                    scale(0.98);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+
+            }
+
+        }
+
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+
+                transform: scale(1);
+
+            }
+
+            10% {
+
+                transform: scale(1.08);
+
+            }
+
+            20% {
+
+                transform: scale(1);
+
+            }
+
+            30% {
+
+                transform: scale(1.08);
+
+            }
+
+            40% {
+
+                transform: scale(1);
+
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 480px) {
+
+            body {
+
+                min-height: 100svh;
+   
+                padding: 20px 18px;
+
+                align-items: center;
+
+            }
+
+            .secret-card {
+
+                width: 88%;
+
+                max-width: 350px;
+
+                padding: 32px 20px;
+
+                border-radius: 24px;
+
+            }
+
+            .eyebrow {
+
+                font-size: 11px;
+
+                letter-spacing: 3px;
+
+                margin-bottom: 14px;
+
+            }
+
+            .heart {
+
+                width: 48px;
+
+                height: 48px;
+
+                font-size: 28px;
+
+                margin-bottom: 16px;
+
+            }
+
+            h1 {
+
+                font-size: 28px;
+
+                line-height: 1.15;
+
+                margin-bottom: 12px;
+
+            }
+
+            .intro {
+
+                font-size: 12.5px;
+
+                line-height: 1.75;
+
+            }
+
+            .story-box {
+
+                margin: 18px 0;
+
+                padding: 23px 18px;
+
+                border-radius: 18px;
+
+            }
+
+            .story-box h2 {
+
+                font-size: 17px;
+
+                line-height: 1.4;
+
+            }
+
+            .story-box p {
+
+                font-size: 11.5px;
+
+                line-height: 1.7;
+
+            }
+
+            .suspense {
+
+                margin: 22px auto 18px;
+
+                font-size: 12.5px;
+
+                line-height: 1.7;
+
+            }
+
+            .hint {
+
+                padding: 13px;
+
+                margin-bottom: 12px;
+
+            }
+
+            input,
+
+            button {
+
+                height: 52px;
+
+            }
+
+            .footer {
+
+                margin-top: 20px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <main class="secret-card">
+
+
+        <!-- DECORATIVE LINE -->
+
+        <div class="top-line"></div>
+
+
+        <!-- SMALL HEADING -->
+
+        <div class="eyebrow">
+            A LITTLE SECRET
+        </div>
+
+
+        <!-- HEART -->
+
+        <div class="heart">
+            ♡
+        </div>
+
+
+        <!-- MAIN HEADING -->
+
+        <h1>
+            FOR MY LOVE
+        </h1>
+
+
+        <!-- INTRO -->
+
+        <p class="intro">
+
+            Every love story has its own little moments.
+            Some are big enough to remember forever.
+            Some are so small that only the two people
+            living the story would ever understand them.
+            
+            <br>
+            <strong>And Somehow, All Those Little Moments
+            Became US</strong>
+
+        </p>
+
+
+        <!-- STORY PREVIEW -->
+
+        <div class="story-box">
+
+
+            <div class="story-label">
+                A STORY WORTH READING
+            </div>
+
+
+            <h2>
+                FROM TWO STRANGERS TO TWO PEOPLE CHOOSING EACH OTHER
+            </h2>
+
+
+            <p>
+
+                There have been conversations we never
+                planned, laughs we didn't expect,
+                memories we never knew we were making,
+                and moments that slowly turned into
+                something much bigger than either of us
+            </p>
+
+
+        </div>
+
+
+        <!-- SUSPENSE -->
+
+        <p class="suspense">
+            
+            <strong>
+                WANT TO SEE OUR STORY? 👀
+            </strong>
+
+            <br>
+
+            Crack The Password And Unlock Our Journey.
+
+            <br>
+
+            <strong>
+                BUT REMEMBER - THIS ONE IS ONLY FOR YOU. 🤍
+            </strong>
+
+        </p>
+
+
+        <!-- HINT -->
+
+        <div class="hint">
+
+
+            <div class="hint-title">
+              HINT
+            </div>
+
+
+            <div class="hint-text">
+                Rasmalai
+            </div>
+
+
+        </div>
+
+
+        <!-- PASSWORD -->
+
+        <div class="password-box">
+
+    <input
+        type="password"
+        id="password"
+        placeholder="ENTER PASSWORD"
+        autocomplete="off"
+    >
+
+    <button
+        type="button"
+        class="eye-button"
+        onclick="togglePassword()"
+    >🙈</button>
+
+</div>
+
+        <!-- BUTTON -->
+
+        <button onclick="unlock()">
+
+            UNLOCK OUR STORY ♡
+
+        </button>
+
+
+        <!-- MESSAGE -->
+
+        <div id="message"></div>
+
+
+        <!-- FOOTER -->
+
+        <div class="footer">
+
+            MADE WITH LOVE · JUST FOR YOU
+
+        </div>
+
+
+    </main>
+
+
+    <script>
+
+
+        function unlock() {
+
+
+            const enteredPassword =
+
+                document
+                    .getElementById("password")
+                    .value
+                    .trim();
+
+
+            /*
+                SECRET PASSWORD
+
+                This is NOT displayed anywhere
+                on the webpage.
+
+            */
+
+            const correctPassword =
+                "16 April 2024";
+
+
+            /*
+                GOOGLE DRIVE LINK
+
+                We will replace this later.
+
+            */
+
+            const googleDriveLink =
+                "https://drive.google.com/drive/folders/1UmY8fP6YstagX_cU2hbMur3o24tZVNzV?usp=sharing";
+
+
+            const message =
+                document.getElementById("message");
+
+
+            /*
+                CHECK PASSWORD
+            */
+
+            if (
+
+                enteredPassword.toLowerCase()
+
+                ===
+
+                correctPassword.toLowerCase()
+
+            ) {
+
+
+                message.style.color =
+                    "#063c2c";
+
+
+                message.innerHTML =
+                    "UNLOCKED ♡ &nbsp; YOUR STORY IS WAITING...";
+
+
+                /*
+                    Wait before opening Drive
+                */
+
+                setTimeout(function() {
+     window.open(googleDriveLink, "_blank");
+}, 1500);
+
+            }
+
+
+            else {
+
+
+                message.style.color =
+                    "#7b1816";
+
+
+                message.innerHTML =
+                    "Hmm... that's not it. Try again 🤍";
+
+
+            }
+
+        }
+
+        function togglePassword() {
+
+    const password = document.getElementById("password");
+    const eyeButton = document.querySelector(".eye-button");
+
+    if (password.type === "password") {
+
+        password.type = "text";
+        eyeButton.textContent = "🙉";
+
+    } else {
+
+        password.type = "password";
+        eyeButton.textContent = "🙈";
+
+    }
+
+}
+
+    </script>
+
+
+</body>
+
+</html>
